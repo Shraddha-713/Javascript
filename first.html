@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sorted Program</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var num = [0, -1, 4];
+		for( var i = 0 ; i <= num.length - 1; i++) {
+			for( var j = 0; j <= i; j++) {
+				if(num[i] > num[j]) {
+					var temp = num[i];
+					num[i] = num[j];
+					num[j] = temp;
+				}
+			}
+		}
+		for( var i = 0; i <= num.length - 1; i++) {
+			alert(num[i]);
+		}
+	</script>
+</html>
