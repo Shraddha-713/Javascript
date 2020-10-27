@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Odd Even Prime</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var num = [0, 1, 2, 3, 4];
+		for (var i = 0; i <= num.length - 1; i++) {
+			if(num[i] % 2 == 0) {
+					console.log(num[i]+" is Even");
+			}
+			else if(num[i] != 0 || num[i] != 1) {
+				if(num[i] % 2 == 0) {
+					console.log(num[i]+" is Even and Prime");
+				}
+				else {
+					console.log(num[i]+" is Odd and Prime");
+				}
+			}
+			else if(num[i] % 2 != 0) {
+				console.log(num[i]+" is odd");
+			}
+			
+		}
+	</script>
+</html>
