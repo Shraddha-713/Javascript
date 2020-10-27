@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<input type="number" id="num" placeholder="How many terms?" style="width: 250px; height: 30px;">
+		<br><br><br>
+		<button onclick="btn()" style="width: 200px; height: 30px;">Get Fibonacci Series</button>
+	</body>
+	<script>
+		function btn() {
+			var num = document.getElementById('num').value;
+			var a = 0, b = 1, c;
+			document.write(a+" ");
+			document.write(b+" ");
+			for(var i = 2; i <= num; i++) {
+				c = a + b;
+				document.write(c+" ");
+				a = b;
+				b = c;
+			}
+		}
+	</script>
+</html>
