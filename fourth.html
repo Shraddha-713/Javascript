@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<input id="email" type="email" placeholder="Enter your Email Id-" style="width: 300px; height: 30px;">
+			<button onclick="btn()" style="width: 150px; height: 35px;">Check</button><br>
+		</form>
+	</body>
+	<script>
+		function btn() {
+			var maskid = "";
+			var email = document.getElementById('email').value;
+			var start = email.substring(0,email.lastIndexOf("@"));
+			var end = email.substring(email.lastIndexOf("@"));
+			for(var i=0; i<start.length; i++){
+				if(i == 0 || i == start.length - 1) {   ////////
+					maskid = maskid + start[i].toString();
+				}
+				else {
+					maskid = maskid + "*";
+				}
+			}
+			maskid = maskid + end;
+
+			alert(maskid);
+		}
+	</script>
+</html>
